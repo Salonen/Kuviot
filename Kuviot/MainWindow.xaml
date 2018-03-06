@@ -5,8 +5,101 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kuviot"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+    
+        Title="MainWindow" Height="763.5" Width="1000.5" SizeChanged="Window_SizeChanged">
+
+    <Grid Margin="0,-219,-396,-259" RenderTransformOrigin="0.48,0.502" HorizontalAlignment="Left" Width="1622">
+        <Canvas x:Name="C" HorizontalAlignment="Left" Height="400" Margin="51,258,0,0" VerticalAlignment="Top" Width="400">
+            <TextBlock x:Name="ohje"  Height="171" Canvas.Left="557" TextWrapping="Wrap" Text="Käyttöohje. Valitse ensin funktio tai funktioita vasemmalta ListBox:ista tai ListBox:eista. Voit tallenttaa yhdistelmän Syötä napilla ja piirtää Piirrä napilla. Valitse napeista voit valita mihin 6 paikkaa tallennat tai luet. Lue näppäimellä voi lukea valitun yhdistelmän. Tyhjennä tyhjentää ruudun. LisBox:ien yllä olevat numerot ovat apu numeroita esim. potenssin kantaluku. Ylin numero on valittu muistipaikka. Loput numerot ylhäällä ovat liikuttelua varten."  Canvas.Top="210" Width="257"/>
+            <Button x:Name="button9" Content="Kaava" Height="26" Canvas.Left="516" Canvas.Top="386" Width="81" Click="button9_Click"/>
+        </Canvas>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="100" Margin="10,663,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="listBox_SelectionChanged"/>
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="100" Margin="115,663,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="listBox1_SelectionChanged"/>
+        <ListBox x:Name="listBox2" HorizontalAlignment="Left" Height="100" Margin="220,663,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="listBox2_SelectionChanged"/>
+        <ListBox x:Name="listBox3" HorizontalAlignment="Left" Height="100" Margin="325,663,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="listBox3_SelectionChanged"/>
+        <ListBox x:Name="listBox4" HorizontalAlignment="Left" Height="100" Margin="430,663,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="listBox4_SelectionChanged"/>
+        <Button x:Name="button" Content="Tyhjennä" HorizontalAlignment="Left" Margin="505,581,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="10,630,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="115,630,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="220,630,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.058,-0.152"/>
+        <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="24" Margin="328,630,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="97"/>
+        <TextBox x:Name="textBox4" HorizontalAlignment="Left" Height="24" Margin="430,630,0,0" TextWrapping="Wrap" Text="3" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="button1" Content="Syötä" HorizontalAlignment="Left" Height="26" Margin="608,338,0,0" VerticalAlignment="Top" Width="68" Click="button1_Click"/>
+        <Button x:Name="button2" Content="Lue" HorizontalAlignment="Left" Height="26" Margin="702,338,0,0" VerticalAlignment="Top" Width="54" Click="button2_Click"/>
+        <TextBox x:Name="textBox6" HorizontalAlignment="Left" Height="23" Margin="608,405,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="68"/>
+        <TextBox x:Name="textBox7" HorizontalAlignment="Left" Height="23" Margin="702,405,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="54"/>
+        <TextBox x:Name="textBox8" HorizontalAlignment="Left" Height="23" Margin="796,405,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="54"/>
+        <Button x:Name="button3" Content="Valitse0" HorizontalAlignment="Left" Margin="880,405,0,0" VerticalAlignment="Top" Width="76" Click="button3_Click"/>
+        <Button x:Name="button4" Content="Valitse1" HorizontalAlignment="Left" Margin="880,448,0,0" VerticalAlignment="Top" Width="75" Click="button4_Click"/>
+        <TextBox x:Name="textBox12" HorizontalAlignment="Left" Height="22" Margin="794,338,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button5" Content="Valitse2" HorizontalAlignment="Left" Margin="880,495,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="button5_Click"/>
+        <Button x:Name="button6" Content="Valitse3" HorizontalAlignment="Left" Height="24" Margin="880,537,0,0" VerticalAlignment="Top" Width="75" Click="button6_Click"/>
+        <Button x:Name="button7" Content="Valitse4" HorizontalAlignment="Left" Height="20" Margin="880,581,0,0" VerticalAlignment="Top" Width="75" Click="button7_Click"/>
+        <Button x:Name="button8" Content="Valitse5" HorizontalAlignment="Left" Height="20" Margin="880,619,0,0" VerticalAlignment="Top" Width="76" Click="button8_Click"/>
+        <TextBox x:Name="textBox25" HorizontalAlignment="Left" Height="23" Margin="676,856,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="22"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="18" Margin="608,369,0,0" TextWrapping="Wrap" Text="x" VerticalAlignment="Top" Width="68"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="18" Margin="704,369,0,0" TextWrapping="Wrap" Text="y" VerticalAlignment="Top" Width="52"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="18" Margin="796,369,0,0" TextWrapping="Wrap" Text="peilaa" VerticalAlignment="Top" Width="54"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="13" Margin="635,824,0,0" TextWrapping="Wrap" Text="vaihda" VerticalAlignment="Top" Width="48"/>
+        <TextBox x:Name="textBox27" HorizontalAlignment="Left" Height="23" Margin="719,856,0,0" TextWrapping="Wrap" Text="-200" VerticalAlignment="Top" Width="47"/>
+        <TextBox x:Name="textBox27_Copy5" HorizontalAlignment="Left" Height="23" Margin="781,856,0,0" TextWrapping="Wrap" Text="200" VerticalAlignment="Top" Width="47"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="676,824,0,0" TextWrapping="Wrap" Text="x rajaus alku" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock4_Copy" HorizontalAlignment="Left" Margin="746,824,0,0" TextWrapping="Wrap" Text="x rajaus loppu" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="835,824,0,0" TextWrapping="Wrap" Text="zoom" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBox28" HorizontalAlignment="Left" Height="23" Margin="833,856,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="32"/>
+        <Button x:Name ="Piirrä" Content="Piirrä" HorizontalAlignment="Left" Height="24" Margin="505,537,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <TextBox x:Name="textBox29" HorizontalAlignment="Left" Height="26" Margin="682,644,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="273"/>
+        <TextBox x:Name="A1" HorizontalAlignment="Left" Height="24" Margin="24,795,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="27" RenderTransformOrigin="-0.205,0.25"/>
+        <TextBox x:Name="A2" HorizontalAlignment="Left" Height="24" Margin="70,795,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="28" RenderTransformOrigin="-0.205,0.25"/>
+        <TextBox x:Name="B1" HorizontalAlignment="Left" Height="24" Margin="130,795,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="28" RenderTransformOrigin="-0.205,0.25"/>
+        <TextBox x:Name="B2" HorizontalAlignment="Left" Height="24" Margin="163,795,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="28" RenderTransformOrigin="-0.205,0.25"/>
+        <TextBox x:Name="C1" HorizontalAlignment="Left" Height="24" Margin="235,795,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="28" RenderTransformOrigin="-0.205,0.25"/>
+        <TextBox x:Name="C2" HorizontalAlignment="Left" Height="24" Margin="268,795,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="28" RenderTransformOrigin="-0.205,0.25"/>
+        <TextBox x:Name="D1" HorizontalAlignment="Left" Height="24" Margin="346,795,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="28" RenderTransformOrigin="-0.205,0.25"/>
+        <TextBox x:Name="D2" HorizontalAlignment="Left" Height="24" Margin="379,795,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="28" RenderTransformOrigin="-0.205,0.25"/>
+        <TextBox x:Name="E1" HorizontalAlignment="Left" Height="24" Margin="444,795,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="28" RenderTransformOrigin="-0.205,0.25"/>
+        <TextBox x:Name="E2" HorizontalAlignment="Left" Height="24" Margin="477,795,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="28" RenderTransformOrigin="-0.205,0.25"/>
+        <Button x:Name="button10" Content="Lukitse/Vapauta Pallo" HorizontalAlignment="Left" Margin="573,687,0,0" VerticalAlignment="Top" Width="121" Click="button10_Click"/>
+        <TextBox x:Name="A3" HorizontalAlignment="Left" Height="32" Margin="796,693,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="42" RenderTransformOrigin="0.571,-0.75"/>
+        <TextBox x:Name="B3" HorizontalAlignment="Left" Height="32" Margin="843,731,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="C3" HorizontalAlignment="Left" Height="32" Margin="892,767,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="D3" HorizontalAlignment="Left" Height="32" Margin="944,805,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="E3" HorizontalAlignment="Left" Height="33" Margin="743,730,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="F3" HorizontalAlignment="Left" Height="32" Margin="479,848,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="G3" HorizontalAlignment="Left" Height="32" Margin="409,881,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="H3" HorizontalAlignment="Left" Height="32" Margin="346,910,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="I3" HorizontalAlignment="Left" Height="32" Margin="994,838,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="42"/>
+        <TextBox x:Name="J3" HorizontalAlignment="Left" Height="24" Margin="994,814,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.636,2.958"/>
+        <TextBox x:Name="K3" HorizontalAlignment="Left" Height="24" Margin="939,781,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="22"/>
+        <TextBox x:Name="L3" HorizontalAlignment="Left" Height="24" Margin="892,739,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="22"/>
+        <TextBox x:Name="M3" HorizontalAlignment="Left" Height="24" Margin="843,701,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.636,0.083"/>
+        <TextBox x:Name="N3" HorizontalAlignment="Left" Height="24" Margin="769,701,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.864,5.125"/>
+        <TextBox x:Name="O3" HorizontalAlignment="Left" Height="24" Margin="721,739,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.636,2.375"/>
+        <TextBox x:Name="P3" HorizontalAlignment="Left" Height="24" Margin="452,856,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.591,0.875"/>
+        <TextBox x:Name="Q3" HorizontalAlignment="Left" Height="24" Margin="379,881,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="22" RenderTransformOrigin="0.636,-1.542"/>
+        <Button x:Name ="Inside1" Content="Inside1" HorizontalAlignment="Left" Height="21" Margin="90,798,0,0" VerticalAlignment="Top" Width="68" Click="Button_Click_2"/>
+        <Button x:Name ="Inside2" Content="Inside2" HorizontalAlignment="Left" Height="21" Margin="196,798,0,0" VerticalAlignment="Top" Width="68" Click="Button_Click_3"/>
+        <Button x:Name ="Inside3" Content="Inside3" HorizontalAlignment="Left" Height="21" Margin="302,798,0,0" VerticalAlignment="Top" Width="68" RenderTransformOrigin="0.728,0.5" Click="Button_Click_4"/>
+        <Button x:Name ="Inside4" Content="Inside4" HorizontalAlignment="Left" Height="21" Margin="406,798,0,0" VerticalAlignment="Top" Width="68" RenderTransformOrigin="0.728,0.5" Click="Button_Click_5"/>
+        <TextBox x:Name="t1" HorizontalAlignment="Left" Height="23" Margin="92,824,0,0" TextWrapping="Wrap" Text="pois" VerticalAlignment="Top" Width="66"/>
+        <TextBox x:Name="t2" HorizontalAlignment="Left" Height="23" Margin="198,824,0,0" TextWrapping="Wrap" Text="pois" VerticalAlignment="Top" Width="66"/>
+        <TextBox x:Name="t3" HorizontalAlignment="Left" Height="23" Margin="304,824,0,0" TextWrapping="Wrap" Text="pois" VerticalAlignment="Top" Width="66"/>
+        <TextBox x:Name="t4" HorizontalAlignment="Left" Height="23" Margin="406,824,0,0" TextWrapping="Wrap" Text="pois" VerticalAlignment="Top" Width="66"/>
+        <Slider x:Name="S" HorizontalAlignment="Left" Height="35" Margin="608,278,0,0" VerticalAlignment="Top" Width="353" ValueChanged="Slider_ValueChanged"/>
+        <TextBlock x:Name="val0" HorizontalAlignment="Left" Height="20" Margin="796,313,0,0" TextWrapping="Wrap" Text="Valinta : " VerticalAlignment="Top" Width="69"/>
+        <TextBox x:Name="kaava0" HorizontalAlignment="Left" Height="20" Margin="994,405,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="189"/>
+        <TextBox x:Name="kaava1" HorizontalAlignment="Left" Height="20" Margin="994,449,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="189"/>
+        <TextBox x:Name="kaava2" HorizontalAlignment="Left" Height="20" Margin="994,498,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="189"/>
+        <TextBox x:Name="kaava3" HorizontalAlignment="Left" Height="20" Margin="994,537,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="189"/>
+        <TextBox x:Name="kaava4" HorizontalAlignment="Left" Height="20" Margin="994,581,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="189"/>
+        <TextBox x:Name="kaava5" HorizontalAlignment="Left" Height="20" Margin="994,616,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="189"/>
+        <ComboBox  x:Name="CB" Text="Valitse muistipaikka" HorizontalAlignment="Left" Height="29" Margin="682,781,0,0" VerticalAlignment="Top" Width="273" SelectionChanged="CB_SelectionChanged" RenderTransformOrigin="0.503,-0.603"/>
+        <Button x:Name="nol" Content="Kaavan nollaus" HorizontalAlignment="Left" Height="20" Margin="731,687,0,0" VerticalAlignment="Top" Width="154" Click="nol_Click"/>
+        <TextBlock x:Name="val" HorizontalAlignment="Left" Height="31" Margin="685,745,0,0" TextWrapping="Wrap" Text="Valitse muistipaikka : " VerticalAlignment="Top" Width="165"/>
+
     </Grid>
+
+
 </Window>
+
+    
